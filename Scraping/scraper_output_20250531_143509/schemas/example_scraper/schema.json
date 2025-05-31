@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "published_date": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "url",
+    "timestamp"
+  ]
+}

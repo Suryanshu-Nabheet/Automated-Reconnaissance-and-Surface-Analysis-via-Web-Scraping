@@ -1,0 +1,53 @@
+2025-05-31 14:35:09,928 - scraper_orchestrator - INFO - Logging to scraper_output_20250531_143509/logs/orchestrator.log
+2025-05-31 14:35:09,928 - scraper_orchestrator - INFO - Checking Python environment...
+2025-05-31 14:35:10,013 - scraper_orchestrator - WARNING - Python module beautifulsoup4 not found. Installing...
+2025-05-31 14:35:10,361 - scraper_orchestrator - WARNING - Python module pandas not found. Installing...
+2025-05-31 14:35:18,981 - scraper_orchestrator - INFO - Python environment OK
+2025-05-31 14:35:18,982 - scraper_orchestrator - INFO - Checking Node.js environment...
+2025-05-31 14:35:19,239 - scraper_orchestrator - INFO - Node.js version: v22.14.0, npm version: 11.0.0
+2025-05-31 14:35:19,239 - scraper_orchestrator - WARNING - Node modules not found. Installing dependencies...
+2025-05-31 14:45:29,524 - scraper_orchestrator - INFO - Node.js environment OK
+2025-05-31 14:45:29,524 - scraper_orchestrator - INFO - Starting scraper execution with 4 workers
+2025-05-31 14:45:29,525 - scraper_orchestrator - INFO - Python scrapers: example_scraper, news_scraper
+2025-05-31 14:45:29,525 - scraper_orchestrator - INFO - TypeScript scrapers: example_scraper, product_scraper
+2025-05-31 14:45:29,527 - scraper_orchestrator - INFO - Running Python scraper: example_scraper
+2025-05-31 14:45:29,527 - scraper_orchestrator - INFO - Running Python scraper: news_scraper
+2025-05-31 14:45:29,527 - scraper_orchestrator - INFO - Running TypeScript scraper: example_scraper
+2025-05-31 14:45:29,527 - scraper_orchestrator - INFO - Compiling TypeScript code...
+2025-05-31 14:45:29,527 - scraper_orchestrator - INFO - Running TypeScript scraper: product_scraper
+2025-05-31 14:45:29,529 - scraper_orchestrator - INFO - Compiling TypeScript code...
+2025-05-31 14:45:29,531 - scraper_orchestrator - ERROR - Python scraper news_scraper failed: No module named 'src.scrapers.python.news_scraper'
+2025-05-31 14:45:29,535 - scraper_orchestrator - ERROR - Traceback (most recent call last):
+  File "/Users/suryanshunabheet/Downloads/Scraping/main.py", line 228, in run_python_scraper
+    scraper_module = importlib.import_module(f"src.scrapers.python.{scraper_name}")
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.scrapers.python.news_scraper'
+
+2025-05-31 14:45:31,093 - scraper_orchestrator - ERROR - TypeScript scraper example_scraper failed: Command '['npm', 'run', 'build']' returned non-zero exit status 2.
+2025-05-31 14:45:31,093 - scraper_orchestrator - ERROR - TypeScript scraper product_scraper failed: Command '['npm', 'run', 'build']' returned non-zero exit status 2.
+2025-05-31 14:45:31,094 - scraper_orchestrator - ERROR - Traceback (most recent call last):
+  File "/Users/suryanshunabheet/Downloads/Scraping/main.py", line 288, in run_typescript_scraper
+    subprocess.check_call(["npm", "run", "build"])
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 419, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['npm', 'run', 'build']' returned non-zero exit status 2.
+
+2025-05-31 14:45:31,094 - scraper_orchestrator - ERROR - Traceback (most recent call last):
+  File "/Users/suryanshunabheet/Downloads/Scraping/main.py", line 288, in run_typescript_scraper
+    subprocess.check_call(["npm", "run", "build"])
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 419, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['npm', 'run', 'build']' returned non-zero exit status 2.
+
+2025-05-31 14:45:31,776 - scraper_orchestrator - INFO - Python scraper example_scraper completed successfully
+2025-05-31 14:45:31,776 - scraper_orchestrator - INFO - Generating report...
+2025-05-31 14:45:31,777 - scraper_orchestrator - INFO - HTML report generated at scraper_output_20250531_143509/reports/scraping_report.html
+2025-05-31 14:45:31,777 - scraper_orchestrator - INFO - Report generated at scraper_output_20250531_143509/reports/scraping_report.json
+2025-05-31 14:45:31,777 - scraper_orchestrator - INFO - Scraping completed: 1 successful, 3 failed, 2 items collected

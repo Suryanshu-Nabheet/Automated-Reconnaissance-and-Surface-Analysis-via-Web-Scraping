@@ -1,0 +1,115 @@
+# Unified Web Scraper Configuration
+# 
+# This configuration file defines settings for both Python and TypeScript scrapers.
+# It includes example website configurations, selectors, and scraper-specific options.
+
+# Parallel execution settings
+parallelism:
+  max_workers: 4           # Maximum number of concurrent scrapers
+  timeout: 300             # Timeout in seconds for each scraper
+
+# List of scrapers to run by type
+scrapers:
+  python:
+    - example_scraper
+    - news_scraper
+  typescript:
+    - example_scraper
+    - product_scraper
+
+# Rate limiting to avoid being blocked
+rate_limiting:
+  requests_per_minute: 20
+  delay_between_requests: 1.5
+  max_retries: 3
+  retry_delay: 5
+
+# Output configuration
+output:
+  formats:
+    - json
+    - csv
+  compress_after_days: 7
+  retention_days: 30
+
+# Example website configurations
+targets:
+  # Example website
+  example_scraper:
+    url: https://example.com
+    selectors:
+      title: h1
+      content: div.content
+      links: a
+      metadata: meta
+    options:
+      maxLinks: 5
+      delay: 1000
+      timeout: 30000
+      headless: true
+
+  # News website
+  news_scraper:
+    url: https://news.example.com
+    selectors:
+      title: h1.headline
+      content: div.article-body
+      links: a.related-link
+      published_date: span.article-date
+      author: span.author-name
+      categories: div.categories a
+    options:
+      maxLinks: 10
+      delay: 2000
+      timeout: 45000
+      headless: true
+    python_specific:
+      user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+      follow_redirects: true
+      verify_ssl: true
+
+  # Product website
+  product_scraper:
+    url: https://shop.example.com
+    selectors:
+      title: h1.product-title
+      price: span.price
+      description: div.product-description
+      images: img.product-image
+      reviews: div.review
+      rating: div.rating-stars
+    options:
+      maxLinks: 20
+      delay: 3000
+      timeout: 60000
+      headless: false
+    typescript_specific:
+      use_puppeteer: true
+      screenshot: true
+      javascript_enabled: true
+      cookies_enabled: true
+
+# Proxy configuration (optional)
+proxies:
+  enabled: false
+  rotation: true
+  list:
+    - http://proxy1.example.com:8080
+    - http://proxy2.example.com:8080
+
+# Authentication settings (optional)
+authentication:
+  enabled: false
+  credentials:
+    username: ${SCRAPER_USERNAME}
+    password: ${SCRAPER_PASSWORD}
+
+# Global scraper settings
+settings:
+  user_agent_rotation: true
+  respect_robots_txt: true
+  default_timeout: 30
+  download_images: false
+  download_files: false
+  javascript_required: false
+

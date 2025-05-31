@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Scraping Report - 20250531_143509</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        .summary { background-color: #f5f5f5; padding: 15px; border-radius: 5px; }
+        .success { color: green; }
+        .error { color: red; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>Web Scraping Report</h1>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Start Time:</strong> 2025-05-31T14:35:09.924790</p>
+        <p><strong>End Time:</strong> 2025-05-31T14:45:31.776784</p>
+        <p><strong>Duration:</strong> 621.85 seconds</p>
+        <p><strong>Python Scrapers Run:</strong> 2</p>
+        <p><strong>TypeScript Scrapers Run:</strong> 2</p>
+        <p><strong>Successful Scrapers:</strong> <span class="success">1</span></p>
+        <p><strong>Failed Scrapers:</strong> <span class="error">3</span></p>
+        <p><strong>Data Items Collected:</strong> 2</p>
+        <p><strong>Output Directory:</strong> scraper_output_20250531_143509</p>
+    </div>
+    
+    <h2>Scraper Details</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Items Scraped</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        
+        <tr>
+            <td>news_scraper</td>
+            <td>python</td>
+            <td class="error">failed</td>
+            <td>0</td>
+            <td>2025-05-31T14:45:29.527882</td>
+            <td>2025-05-31T14:45:29.536042</td>
+        </tr>
+        
+        <tr>
+            <td>example_scraper</td>
+            <td>typescript</td>
+            <td class="error">failed</td>
+            <td>0</td>
+            <td>2025-05-31T14:45:29.527950</td>
+            <td>2025-05-31T14:45:31.094859</td>
+        </tr>
+        
+        <tr>
+            <td>product_scraper</td>
+            <td>typescript</td>
+            <td class="error">failed</td>
+            <td>0</td>
+            <td>2025-05-31T14:45:29.529219</td>
+            <td>2025-05-31T14:45:31.095010</td>
+        </tr>
+        
+        <tr>
+            <td>example_scraper</td>
+            <td>python</td>
+            <td class="success">success</td>
+            <td>2</td>
+            <td>2025-05-31T14:45:29.527690</td>
+            <td>2025-05-31T14:45:31.776402</td>
+        </tr>
+        
+    </table>
+    
+    
+    <h2>Errors</h2>
+    <table>
+        <tr>
+            <th>Scraper</th>
+            <th>Type</th>
+            <th>Error</th>
+        </tr>
+        
+        <tr>
+            <td>news_scraper</td>
+            <td>python</td>
+            <td class="error">No module named 'src.scrapers.python.news_scraper'</td>
+        </tr>
+        
+        <tr>
+            <td>example_scraper</td>
+            <td>typescript</td>
+            <td class="error">Command '['npm', 'run', 'build']' returned non-zero exit status 2.</td>
+        </tr>
+        
+        <tr>
+            <td>product_scraper</td>
+            <td>typescript</td>
+            <td class="error">Command '['npm', 'run', 'build']' returned non-zero exit status 2.</td>
+        </tr>
+        
+    </table>
+    
+    
+    <p><em>Report generated on 2025-05-31 14:45:31</em></p>
+</body>
+</html>

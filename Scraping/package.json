@@ -1,0 +1,80 @@
+{
+  "name": "unified-web-scraper",
+  "version": "1.0.0",
+  "description": "Advanced web scraping framework combining Python and TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "postinstall": "npm run build",
+    "start": "python3 main.py",
+    "start:dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' main.py",
+    
+    "scrape": "python3 main.py",
+    "scrape:example": "python3 -m src.scrapers.python.example_scraper --url https://example.com",
+    "scrape:news": "python3 -m src.scrapers.python.news_scraper --url https://news.example.com",
+    "scrape:product": "ts-node src/scrapers/ts/product_scraper.ts",
+    
+    "ts:example": "ts-node src/scrapers/ts/example_scraper.ts",
+    "ts:product": "ts-node src/scrapers/ts/product_scraper.ts",
+    
+    "py:example": "python3 -m src.scrapers.python.example_scraper",
+    "py:news": "python3 -m src.scrapers.python.news_scraper",
+    
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "web-scraping",
+    "typescript",
+    "python",
+    "puppeteer",
+    "cheerio",
+    "axios",
+    "scraper",
+    "crawler"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^11.0.0",
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.1",
+    "puppeteer": "^20.1.0",
+    "winston": "^3.8.2",
+    "yaml": "^2.2.2",
+    "yargs": "^17.7.2",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.31",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.3",
+    "@types/yargs": "^17.0.24",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  }
+}
+

@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "start_time": "2025-05-31T14:35:09.924790",
+    "end_time": "2025-05-31T14:45:31.776784",
+    "duration_seconds": 621.851994,
+    "python_scrapers_run": 2,
+    "ts_scrapers_run": 2,
+    "successful_scrapers": 1,
+    "failed_scrapers": 3,
+    "data_items_collected": 2,
+    "output_directory": "scraper_output_20250531_143509"
+  },
+  "errors": [
+    {
+      "scraper": "news_scraper",
+      "type": "python",
+      "error": "No module named 'src.scrapers.python.news_scraper'"
+    },
+    {
+      "scraper": "example_scraper",
+      "type": "typescript",
+      "error": "Command '['npm', 'run', 'build']' returned non-zero exit status 2."
+    },
+    {
+      "scraper": "product_scraper",
+      "type": "typescript",
+      "error": "Command '['npm', 'run', 'build']' returned non-zero exit status 2."
+    }
+  ],
+  "scraper_details": [
+    {
+      "name": "news_scraper",
+      "type": "python",
+      "start_time": "2025-05-31T14:45:29.527882",
+      "status": "failed",
+      "items_scraped": 0,
+      "error": "No module named 'src.scrapers.python.news_scraper'",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/suryanshunabheet/Downloads/Scraping/main.py\", line 228, in run_python_scraper\n    scraper_module = importlib.import_module(f\"src.scrapers.python.{scraper_name}\")\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py\", line 88, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'src.scrapers.python.news_scraper'\n",
+      "end_time": "2025-05-31T14:45:29.536042"
+    },
+    {
+      "name": "example_scraper",
+      "type": "typescript",
+      "start_time": "2025-05-31T14:45:29.527950",
+      "status": "failed",
+      "items_scraped": 0,
+      "error": "Command '['npm', 'run', 'build']' returned non-zero exit status 2.",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/suryanshunabheet/Downloads/Scraping/main.py\", line 288, in run_typescript_scraper\n    subprocess.check_call([\"npm\", \"run\", \"build\"])\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py\", line 419, in check_call\n    raise CalledProcessError(retcode, cmd)\nsubprocess.CalledProcessError: Command '['npm', 'run', 'build']' returned non-zero exit status 2.\n",
+      "end_time": "2025-05-31T14:45:31.094859"
+    },
+    {
+      "name": "product_scraper",
+      "type": "typescript",
+      "start_time": "2025-05-31T14:45:29.529219",
+      "status": "failed",
+      "items_scraped": 0,
+      "error": "Command '['npm', 'run', 'build']' returned non-zero exit status 2.",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/suryanshunabheet/Downloads/Scraping/main.py\", line 288, in run_typescript_scraper\n    subprocess.check_call([\"npm\", \"run\", \"build\"])\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py\", line 419, in check_call\n    raise CalledProcessError(retcode, cmd)\nsubprocess.CalledProcessError: Command '['npm', 'run', 'build']' returned non-zero exit status 2.\n",
+      "end_time": "2025-05-31T14:45:31.095010"
+    },
+    {
+      "name": "example_scraper",
+      "type": "python",
+      "start_time": "2025-05-31T14:45:29.527690",
+      "status": "success",
+      "items_scraped": 2,
+      "error": null,
+      "end_time": "2025-05-31T14:45:31.776402"
+    }
+  ]
+}

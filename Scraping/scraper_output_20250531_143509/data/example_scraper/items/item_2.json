@@ -1,0 +1,15 @@
+{
+  "title": "More information...",
+  "url": "https://www.iana.org/domains/example",
+  "description": "Link found on https://example.com",
+  "timestamp": "2025-05-31T14:45:30.500447",
+  "tags": [
+    "link",
+    "reference"
+  ],
+  "metadata": {
+    "source": "example_scraper",
+    "author": "Unknown",
+    "published_date": "2025-05-31"
+  }
+}
