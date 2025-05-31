@@ -51,7 +51,6 @@ The framework requires both Python and Node.js environments to be set up.
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/unified-web-scraper.git
-cd unified-web-scraper
 
 # Create and activate virtual environment (optional but recommended)
 python -m venv venv
