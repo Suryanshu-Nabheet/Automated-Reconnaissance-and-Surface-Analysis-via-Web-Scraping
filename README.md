@@ -2,8 +2,6 @@
 
 A comprehensive web scraping framework that combines the power of Python and TypeScript in a single, unified system. This framework allows you to leverage the strengths of both ecosystems to build robust, scalable web scrapers for a wide range of websites.
 
-![Scraping Framework](https://via.placeholder.com/800x400?text=Unified+Web+Scraping+Framework)
-
 ## 🌟 Features
 
 - **Hybrid Architecture**: Combines Python and TypeScript in a unified framework
